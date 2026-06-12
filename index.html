@@ -30,6 +30,7 @@
     padding:24px 26px; margin-top:22px; box-shadow:0 2px 10px rgba(31,36,48,.04);}
   h2{font-size:22px; margin:0 0 14px; display:flex; align-items:center; gap:8px; letter-spacing:-.3px;}
   h3{font-size:17px; margin:22px 0 8px;}
+  h4{margin:14px 0 6px;}
   p{margin:8px 0;}
   a{color:#5b3bd6; text-decoration:none; font-weight:600;}
   a:hover{text-decoration:underline;}
@@ -38,7 +39,6 @@
     border-radius:8px; font-size:14px; color:#444; margin:14px 0;}
   .note.warn{border-left-color:var(--warn); background:#fef2f2;}
   .note.good{border-left-color:var(--good); background:#f0fdf4;}
-  /* tables */
   .tablebox{overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:12px; border:1px solid var(--line);}
   table{border-collapse:collapse; width:100%; font-size:13.8px; min-width:560px;}
   th,td{border-bottom:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top;}
@@ -47,7 +47,6 @@
   tbody tr:hover{background:#f3f0ff;}
   td:first-child,th:first-child{font-weight:700;}
   .cmp th:first-child{background:#1c2030;}
-  /* badges */
   .rank{display:inline-block; padding:2px 9px; border-radius:999px; font-size:12px; font-weight:800; color:#fff;}
   .r-gold{background:linear-gradient(135deg,#f6b73c,#f08a3c);}
   .r-silver{background:linear-gradient(135deg,#9aa3b2,#6b7585);}
@@ -58,7 +57,6 @@
   .bad{color:var(--warn); font-weight:700;}
   .pill{display:inline-block; background:var(--soft); border:1px solid var(--line);
     border-radius:8px; padding:1px 8px; font-size:12.5px; margin:2px 4px 2px 0;}
-  /* destination cards */
   .dest{border:1px solid var(--line); border-radius:16px; padding:20px 22px; margin-top:18px; background:#fff;}
   .dest.top{border:2px solid var(--gold); background:linear-gradient(180deg,#fffdf6,#fff);}
   .dest.no{border:1px dashed #f0a3a3; background:#fffafa;}
@@ -69,6 +67,7 @@
   .toc{display:flex; flex-wrap:wrap; gap:8px;}
   .toc a{background:var(--soft); border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:13.5px; color:var(--ink);}
   .toc a:hover{background:var(--brand2); color:#fff; text-decoration:none;}
+  .small{font-size:12.5px;}
   footer{color:var(--muted); font-size:13px; text-align:center; margin-top:30px;}
   .stars{color:#f6b73c; letter-spacing:1px;}
   @media(max-width:560px){
@@ -80,7 +79,7 @@
 <header class="hero">
   <h1>🎉 홍성양 아빠 칠순 가족여행 비교자료</h1>
   <div class="meta">
-    <b>작성일</b> 2026.6.7 · <b>여행 예정</b> 2027년 1월 중순, 5박 6일 · <b>예산</b> 약 1,500만원<br>
+    <b>작성일</b> 2026.6.12 · <b>여행 예정</b> 2027년 1월 중순, 5박 6일 · <b>예산</b> 약 1,500만원<br>
     <b>인원</b> 총 10명 — 할아버지·할머니(70세), 우리 가족(부부+이현 4세+이솔 1세), 누나네(부부+찬영 8세+세연 7세)
   </div>
 </header>
@@ -88,17 +87,16 @@
 <div class="wrap">
 
   <section>
+    <div class="note good"><b>📝 이번 개정(6/12):</b> 점수가 낮던 <b>시드니·다낭·세부 제외</b>, 신규 후보 <b>보라카이 🏝️</b> 추가. "기왕 모은 돈, 더 특별하게"라는 요청을 반영했어요.</div>
     <div class="toc">
       <a href="#tldr">✅ 핵심 결론</a>
       <a href="#table">📊 비교표</a>
-      <a href="#phuket">1.푸켓</a>
-      <a href="#nhatrang">2.나트랑</a>
+      <a href="#boracay">1.보라카이</a>
+      <a href="#phuket">2.푸켓</a>
       <a href="#guam">3.괌</a>
-      <a href="#cebu">4.세부</a>
-      <a href="#danang">5.다낭</a>
-      <a href="#kk">6.코타키나발루</a>
-      <a href="#bali">7.발리</a>
-      <a href="#sydney">8.시드니</a>
+      <a href="#nhatrang">4.나트랑</a>
+      <a href="#kk">5.코타키나발루</a>
+      <a href="#bali">6.발리</a>
       <a href="#final">🎯 최종 추천</a>
     </div>
   </section>
@@ -106,23 +104,21 @@
   <!-- TLDR -->
   <section id="tldr">
     <h2>✅ 먼저 보는 핵심 결론 (TL;DR)</h2>
-    <div class="note good"><b>📌 이 순위의 평가 기준:</b> 가족 회의에서 정한 <b>최우선 = ① 1월 날씨·물놀이 확실성(40%)</b>, 그다음 ② 비행시간·이동 편의(25%, 1살 아기+70세 부모님), ③ 풀빌라 퀄리티(20%), ④ 예산(15%) 가중치로 종합했습니다.
-      <br><span class="small" style="color:#555">※ 이전 자료(<i>family_trip_comparison_jan_resorts</i>)와의 순위 차이는 다낭·괌 포함 여부와 가중치 차이 때문이며, <b>이 자료가 두 자료를 통합한 최신 결론</b>입니다.</span></div>
+    <div class="note good"><b>📌 평가 기준:</b> <b>① 1월 날씨·물놀이 확실성(40%)</b> · ② 비행/이동 편의(25%) · ③ 풀빌라·숙소(20%) · ④ 예산(15%). 단, "돈값 하는 특별함"을 가산했습니다.</div>
     <div class="tablebox">
     <table>
-      <thead><tr><th>순위</th><th>추천지</th><th>종합점수</th><th>한 줄 이유 (날씨·물놀이 우선)</th></tr></thead>
+      <thead><tr><th>순위</th><th>추천지</th><th>점수</th><th>한 줄 이유</th></tr></thead>
       <tbody>
-        <tr><td><span class="rank r-gold">🥇 1순위</span></td><td><b>푸켓</b> 🇹🇭</td><td><b>90</b></td><td><b>1월 건기 최성수기로 날씨·물놀이 확실성 최고</b> + 럭셔리 풀빌라 풍부. (비행 6.5h만 감수)</td></tr>
-        <tr><td><span class="rank r-gold">🥈 2순위</span></td><td><b>나트랑</b> 🇻🇳</td><td><b>88</b></td><td>1월 맑고 따뜻 + <b>비행 5h로 짧음</b> + 빈원더스 물놀이 + 가성비 — <b>날씨와 편의의 최고 균형</b></td></tr>
-        <tr><td><span class="rank r-silver">🥉 3순위</span></td><td><b>괌</b> 🇬🇺</td><td><b>85</b></td><td>1월 건기 쾌적 + 비행 <b>4시간(최단)</b>·치안 best (풀빌라보단 워터파크 리조트)</td></tr>
-        <tr><td><span class="rank r-silver">4순위</span></td><td><b>세부</b> 🇵🇭</td><td><b>84</b></td><td>1월 건기 양호 + 비행 4h + <b>Jpark 워터파크</b>로 아이 만족 최강 (치안 유의)</td></tr>
-        <tr><td><span class="rank r-bronze">5순위</span></td><td><b>다낭</b> 🇻🇳</td><td><b>78</b></td><td>풀빌라·관광(호이안/바나힐)은 최강이나 <b>1월 흐림·찬 바닷물로 물놀이 약점</b> → 기준상 하락</td></tr>
-        <tr><td><span class="rank r-ref">6순위</span></td><td><b>코타키나발루</b> 🇲🇾</td><td><b>72</b></td><td>항공권 최저가지만 <b>1월 우기 끝물 소나기</b>로 날씨 확실성 떨어짐</td></tr>
-        <tr><td><span class="rank r-no">⚠️ 비추천</span></td><td><b>발리</b> 🇮🇩</td><td><b>60</b></td><td><b>1월이 우기 한복판(연중 비 최다)</b> — 물놀이 여행엔 부적합</td></tr>
-        <tr><td><span class="rank r-no">⚠️ 비추천</span></td><td><b>시드니</b> 🇦🇺</td><td><b>55</b></td><td>날씨는 좋으나 비행 <b>10h+</b>·시차 2h·항공비 과다 — 아기·부모님께 부담 최대</td></tr>
+        <tr><td><span class="rank r-gold">🥇 1순위</span></td><td><b>보라카이</b> 🇵🇭</td><td><b>92</b></td><td><b>1월 건기 최성수기 + 세계적 화이트비치</b>로 물놀이·특별함 모두 최상. 프리미엄 리조트 풍부 (현지 이동 ~2h만 감수)</td></tr>
+        <tr><td><span class="rank r-gold">🥈 2순위</span></td><td><b>푸켓</b> 🇹🇭</td><td><b>90</b></td><td>1월 건기 최적 + <b>럭셔리 풀빌라 끝판왕</b>. 칠순 호캉스 격 (비행 6.5h)</td></tr>
+        <tr><td><span class="rank r-silver">🥉 3순위</span></td><td><b>괌</b> 🇬🇺</td><td><b>85</b></td><td>1월 건기 쾌적 + 비행 <b>4시간(최단)</b>·치안 best. 워터파크 리조트</td></tr>
+        <tr><td><span class="rank r-silver">4순위</span></td><td><b>나트랑</b> 🇻🇳</td><td><b>80</b></td><td>가성비·빈원더스 좋지만 <b>"돈값 특별함"에선 다소 아쉬움</b> → 한 단계 아래</td></tr>
+        <tr><td><span class="rank r-bronze">5순위</span></td><td><b>코타키나발루</b> 🇲🇾</td><td><b>72</b></td><td>항공권 최저가지만 <b>1월 우기 끝물 소나기</b>로 날씨 확실성 ↓</td></tr>
+        <tr><td><span class="rank r-no">⚠️ 비추천</span></td><td><b>발리</b> 🇮🇩</td><td><b>60</b></td><td><b>1월 우기 한복판(연중 비 최다)</b> — 물놀이 여행엔 부적합</td></tr>
       </tbody>
     </table>
     </div>
+    <div class="note"><b>한눈 정리:</b> 🏖️ <b>1월 물놀이 확실성 + 특별함</b>이라면 <b>보라카이</b>가 새 1순위, 그다음 <b>푸켓 · 괌</b>. 가성비를 중시하면 <b>나트랑 · 코타키나발루</b>.</div>
   </section>
 
   <!-- 비교표 -->
@@ -131,33 +127,53 @@
     <div class="tablebox">
     <table class="cmp">
       <thead><tr>
-        <th>항목</th><th>다낭 🇻🇳</th><th>나트랑 🇻🇳</th><th>푸켓 🇹🇭</th><th>괌 🇬🇺</th><th>코타키나발루 🇲🇾</th><th>세부 🇵🇭</th><th>발리 🇮🇩</th><th>시드니 🇦🇺</th>
+        <th>항목</th><th>보라카이 🇵🇭</th><th>푸켓 🇹🇭</th><th>괌 🇬🇺</th><th>나트랑 🇻🇳</th><th>코타키나발루 🇲🇾</th><th>발리 🇮🇩</th>
       </tr></thead>
       <tbody>
-        <tr><td>직항 비행시간</td><td>약 4.5~5h</td><td>약 4h 50m</td><td>약 6.5h</td><td class="ok">약 4h 15m</td><td>약 5.5h</td><td class="ok">약 4h 10m</td><td>약 7h</td><td class="bad">약 10.5h ⚠️</td></tr>
-        <tr><td>시차(한국 대비)</td><td>-2h</td><td>-2h</td><td>-2h</td><td class="ok">+1h</td><td>-1h</td><td class="ok">없음</td><td>-1h</td><td class="bad">+2h ⚠️</td></tr>
-        <tr><td>1월 날씨</td><td>21~26℃ 선선, 흐림 잦음</td><td class="ok">건기·24~28℃ 맑고 따뜻</td><td class="ok">건기·최적 28~32℃</td><td class="ok">건기·쾌적 27~30℃</td><td>우기 끝물, 소나기</td><td>건기·양호 26~32℃</td><td class="bad">우기·폭우 ⚠️</td><td>한여름 18~33℃ (자외선强)</td></tr>
-        <tr><td>해수욕 적합도(1월)</td><td>△ (물 차가움)</td><td>○~◎</td><td>◎</td><td>◎</td><td>○</td><td>◎</td><td>△ (비)</td><td>○</td></tr>
-        <tr><td>항공권(1인 왕복·1월)</td><td>약 45~70만</td><td class="ok">약 35~55만</td><td>약 50~75만</td><td>약 45~70만</td><td class="ok">약 30~50만</td><td>약 35~55만</td><td>약 80~120만</td><td class="bad">약 130~200만 ⚠️</td></tr>
-        <tr><td>숙소(1박·대가족)</td><td>40~120만</td><td>40~100만</td><td>50~150만</td><td>리조트 30~60만</td><td class="ok">25~60만</td><td>30~80만</td><td>50~150만</td><td>호텔 30~60만</td></tr>
-        <tr><td>온가족 한 채 풀빌라</td><td>◎ 매우 많음</td><td>◎ 많음(14인)</td><td>◎ 많음</td><td>△ 리조트 위주</td><td>○ 독채 빌라</td><td>◎ 한인 풀빌라</td><td>◎ 많음(우기)</td><td>△ 적음</td></tr>
-        <tr><td>아이·노부모 친화</td><td>◎</td><td>◎</td><td>◎</td><td>◎</td><td>○</td><td>○</td><td>○</td><td>△ 이동부담</td></tr>
-        <tr><td>종합 추천도 <span class="small" style="font-weight:400;color:#888">(날씨우선)</span></td><td class="stars">★★★ <span class="small" style="color:#888">5위</span></td><td class="stars">★★★★★ <span class="small" style="color:#888">2위</span></td><td class="stars">★★★★★ <span class="small" style="color:#888">1위</span></td><td class="stars">★★★★ <span class="small" style="color:#888">3위</span></td><td class="stars">★★★ <span class="small" style="color:#888">6위</span></td><td class="stars">★★★★ <span class="small" style="color:#888">4위</span></td><td class="stars">★★ </td><td class="stars">★★ </td></tr>
+        <tr><td>직항 비행시간</td><td>약 4.5h <span class="small">+현지이동 ~2h</span></td><td>약 6.5h</td><td class="ok">약 4h 15m</td><td>약 4h 50m</td><td>약 5.5h</td><td>약 7h</td></tr>
+        <tr><td>시차(한국 대비)</td><td class="ok">-1h</td><td>-2h</td><td>+1h</td><td>-2h</td><td>-1h</td><td>-1h</td></tr>
+        <tr><td>1월 날씨</td><td class="ok">건기·24~29℃ 최적</td><td class="ok">건기·28~32℃ 최적</td><td class="ok">건기·27~30℃ 쾌적</td><td>건기·24~28℃ 맑음</td><td>우기 끝물, 소나기</td><td class="bad">우기·폭우 ⚠️</td></tr>
+        <tr><td>해수욕 적합도(1월)</td><td class="ok">◎◎</td><td>◎</td><td>◎</td><td>○~◎</td><td>○</td><td>△ (비)</td></tr>
+        <tr><td>항공권(1인 왕복·1월)</td><td>약 40~60만</td><td>약 50~75만</td><td>약 45~70만</td><td class="ok">약 35~55만</td><td class="ok">약 30~50만</td><td>약 80~120만</td></tr>
+        <tr><td>숙소(1박·대가족)</td><td>40~80만</td><td>50~150만</td><td>30~60만</td><td>40~100만</td><td class="ok">25~60만</td><td>50~150만</td></tr>
+        <tr><td>온가족 한 채/풀빌라</td><td>○ 풀빌라+패밀리룸</td><td>◎ 매우 많음</td><td>△ 리조트 위주</td><td>◎ 많음(14인)</td><td>○ 독채 빌라</td><td>◎ 많음(우기)</td></tr>
+        <tr><td>아이·노부모 친화</td><td>○ (이동 빼면 ◎)</td><td>◎</td><td>◎</td><td>◎</td><td>○</td><td>○</td></tr>
+        <tr><td>특별함·만족도</td><td class="ok">◎◎ 세계적 비치</td><td class="ok">◎ 럭셔리</td><td>○</td><td>△</td><td>○</td><td>◎(시기만 맞으면)</td></tr>
+        <tr><td>종합</td><td class="stars">★★★★★ <span class="small" style="color:#888">1위</span></td><td class="stars">★★★★★ <span class="small" style="color:#888">2위</span></td><td class="stars">★★★★ <span class="small" style="color:#888">3위</span></td><td class="stars">★★★★ <span class="small" style="color:#888">4위</span></td><td class="stars">★★★ <span class="small" style="color:#888">5위</span></td><td class="stars">★★ </td></tr>
       </tbody>
     </table>
     </div>
-    <div class="note good">💡 항공권·숙소 가격은 2027년 1월 성수기 기준 <b>추정치</b>입니다. 정확한 날짜 확정 시 실시간 재조회 필요.
-      참고로 <b>2027년 설날은 2월 6일</b>이라 1월 중순은 설 직전 비수기에 걸쳐 <b>상대적으로 저렴할 수 있습니다</b> 👍</div>
+    <div class="note good">💡 가격은 2027년 1월 성수기 <b>추정치</b>. 정확한 날짜 확정 시 실시간 재조회 필요. <b>2027년 설날은 2월 6일</b>이라 1월 중순은 설 직전이라 상대적으로 저렴할 수 있어요 👍</div>
   </section>
 
-  <!-- 여행지별 상세 (종합 순위 순) -->
+  <!-- 여행지별 상세 -->
   <section>
     <h2>🌴 여행지별 상세 <span class="small" style="font-weight:400;color:#888">(종합 순위 순)</span></h2>
 
-    <!-- 푸켓 (1순위) -->
+    <!-- 보라카이 (1순위) -->
+    <div class="dest top" id="boracay">
+      <h3>1️⃣ 보라카이 (필리핀) <span class="rank r-gold">🥇 1순위 · 세계적 화이트비치</span></h3>
+      <div class="why"><b>왜 추천:</b> 1월이 <b>건기 최성수기</b>로 비가 거의 없고, "세계 3대 해변" 화이트비치의 <b>곱은 백사장·얕고 잔잔한 물</b>이 아기·노부모 물놀이에 최적. 가성비 비치인 나트랑보다 <b>"돈값 하는 특별함"이 확실히 위</b>예요.</div>
+      <ul class="facts">
+        <li><b>비행시간</b> 인천→칼리보(KLO) 직항 약 4시간 30분 + 칼리보→보라카이 육로·배 약 2시간 (티웨이·제주·필리핀항공 등). 까띠끌란(MPH) 이용 시 섬까지 배 10분</li>
+        <li><b>1월 항공권</b> 1인 왕복 약 40~60만원 (성수기, 특가 시 더 저렴)</li>
+        <li><b>1월 날씨</b> 건기·24~29℃, 비 거의 없음 → <span class="ok">해수욕·물놀이 최적</span></li>
+        <li><b>주변 관광</b> <span class="pill">🏖️ 화이트비치(스테이션1·2·3)</span><span class="pill">🐚 푸카쉘 비치</span><span class="pill">🏝️ 디니위드 비치</span><span class="pill">🚤 호핑투어·패러세일</span><span class="pill">🤿 헬멧다이빙</span></li>
+      </ul>
+      <h4>🏡 대가족 리조트·풀빌라 추천</h4>
+      <div class="tablebox"><table><thead><tr><th>리조트</th><th>특징</th><th>예약 링크</th></tr></thead><tbody>
+        <tr><td><b>샹그릴라 보라카이</b> ⭐</td><td>야팍·전용비치(반유간), 1베드룸 풀빌라·패밀리룸, 잔잔한 물 (아기 최적)</td><td><a href="https://www.agoda.com/ko-kr/search?q=shangri-la+boracay" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Shangri-La+Boracay+Resort+and+Spa" target="_blank">Booking</a></td></tr>
+        <tr><td><b>크림슨 리조트 & 스파 보라카이</b></td><td>2018 오픈, 풀빌라 프라이빗 플런지풀, 1박 40만~</td><td><a href="https://www.agoda.com/ko-kr/search?q=crimson+resort+boracay" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Crimson+Resort+and+Spa+Boracay" target="_blank">Booking</a></td></tr>
+        <tr><td><b>헤난(Henann) 계열</b></td><td>스테이션1·2 가족형 대형 리조트, 큰 수영장·가성비</td><td><a href="https://www.agoda.com/ko-kr/search?q=henann+boracay" target="_blank">아고다</a></td></tr>
+        <tr><td><b>디스커버리 쇼어 보라카이</b></td><td>화이트비치 중심, 패밀리 스위트</td><td><a href="https://www.agoda.com/ko-kr/search?q=discovery+shores+boracay" target="_blank">아고다</a></td></tr>
+      </tbody></table></div>
+      <div class="note">💡 아기·노부모 동반이면 <b>스테이션1</b>(고운 모래·얕은 수심·고급 리조트)을 추천. 이동 부담을 줄이려면 <b>까띠끌란(MPH) 도착편</b>이 섬과 가까워요.</div>
+    </div>
+
+    <!-- 푸켓 (2순위) -->
     <div class="dest top" id="phuket">
-      <h3>1️⃣ 푸켓 (태국) <span class="rank r-gold">🥇 1순위 · 1월 날씨 확실성 최고</span></h3>
-      <div class="why"><b>왜 추천:</b> 1월이 <b>건기 최성수기</b>라 날씨가 가장 안정적 → 이번 최우선 기준(날씨·물놀이)에서 1위. 럭셔리 풀빌라 풍부해 칠순 호캉스로 격이 있음. 단, 비행 6.5h는 1세 아기에게 다소 부담(직항 잘 자면 감수 가능).</div>
+      <h3>2️⃣ 푸켓 (태국) <span class="rank r-gold">🥈 2순위 · 럭셔리 풀빌라</span></h3>
+      <div class="why"><b>왜 추천:</b> 1월이 <b>건기 최성수기</b>로 날씨 안정적 + 럭셔리 풀빌라가 풍부해 칠순 호캉스로 격이 있음. 단, 비행 6.5h는 1세 아기에게 다소 부담(직항 잘 자면 감수 가능).</div>
       <ul class="facts">
         <li><b>비행시간</b> 약 6시간 32분 (대한·아시아나·진에어 직항)</li>
         <li><b>1월 항공권</b> 1~2월 최성수기, 1인 왕복 약 50~75만원</li>
@@ -166,133 +182,74 @@
       </ul>
       <h4>🏡 대가족 풀빌라 추천</h4>
       <div class="tablebox"><table><thead><tr><th>빌라/리조트</th><th>특징</th><th>예약 링크</th></tr></thead><tbody>
-        <tr><td><b>아난타라 마이카오 푸켓 빌라</b> ⭐</td><td>공항 근처, 풀빌라, 부모님·아기 동선 최상 (1순위 추천)</td><td><a href="https://www.agoda.com/ko-kr/search?q=anantara+mai+khao+phuket+villas" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Anantara+Mai+Khao+Phuket+Villas" target="_blank">Booking</a></td></tr>
+        <tr><td><b>아난타라 마이카오 푸켓 빌라</b> ⭐</td><td>공항 근처, 풀빌라, 부모님·아기 동선 최상</td><td><a href="https://www.agoda.com/ko-kr/search?q=anantara+mai+khao+phuket+villas" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Anantara+Mai+Khao+Phuket+Villas" target="_blank">Booking</a></td></tr>
         <tr><td><b>반얀트리 푸켓</b> ⭐</td><td>라구나 지역, 가족형 풀빌라+식당 접근성 좋음</td><td><a href="https://www.agoda.com/ko-kr/search?q=banyan+tree+phuket" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Banyan+Tree+Phuket" target="_blank">Booking</a></td></tr>
         <tr><td><b>JW 메리어트 마이카오</b></td><td>대형 리조트, 아이·부모님 균형 좋음, 키즈클럽</td><td><a href="https://www.agoda.com/ko-kr/search?q=jw+marriott+phuket+resort+spa" target="_blank">아고다</a></td></tr>
-        <tr><td><b>아난타라 라얀 푸켓</b></td><td>독채 풀빌라, 키즈클럽, 아동 1인 무료</td><td><a href="https://www.agoda.com/ko-kr/search?q=anantara+layan+phuket" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Anantara+Layan+Phuket+Resort" target="_blank">Booking</a></td></tr>
-        <tr><td><b>파빌리온 풀빌라</b></td><td>1~4베드룸, 가족·단체 적합</td><td><a href="https://www.agoda.com/ko-kr/search?q=the+pavilions+phuket" target="_blank">아고다</a></td></tr>
-        <tr><td><b>아야라 카말라 리조트 & 스파</b></td><td>풀빌라+자쿠지, 해변 셔틀</td><td><a href="https://www.agoda.com/ko-kr/search?q=ayara+kamala+phuket" target="_blank">아고다</a></td></tr>
-        <tr><td><b>아비스타 하이드어웨이</b></td><td>풀빌라+다양한 풀, 가성비</td><td><a href="https://www.agoda.com/ko-kr/search?q=avista+hideaway+phuket" target="_blank">아고다</a></td></tr>
+        <tr><td><b>아난타라 라얀 / 아야라 카말라</b></td><td>독채 풀빌라, 키즈클럽</td><td><a href="https://www.agoda.com/ko-kr/search?q=anantara+layan+phuket" target="_blank">아고다</a></td></tr>
       </tbody></table></div>
-      <p style="font-size:13.5px;margin-top:8px">🔎 통합 비교: <a href="https://kr.hotels.com/go/thailand/blog-phuket-poolvilas-best-5" target="_blank">호텔스닷컴 푸켓 풀빌라 베스트</a></p>
-    </div>
-
-    <!-- 나트랑 (2순위) -->
-    <div class="dest top" id="nhatrang">
-      <h3>2️⃣ 나트랑 (베트남) <span class="rank r-gold">🥈 2순위 · 날씨+편의 균형 best</span></h3>
-      <div class="why"><b>왜 추천:</b> 다낭과 거의 비슷하지만 <b>1월 날씨가 더 맑고 따뜻해 해수욕에 유리</b>. 빈원더스(놀이공원+워터파크+수족관)가 섬 하나에 통째로 있어 아이 만족도 최고, 항공권도 더 저렴.</div>
-      <ul class="facts">
-        <li><b>비행시간</b> 약 4시간 50분 (캄란공항 CXR / 대한·아시아나·제주·진에어·티웨이·에어서울·비엣젯 직항)</li>
-        <li><b>1월 항공권</b> 1인 왕복 약 35~55만원 (다낭보다 저렴 경향)</li>
-        <li><b>1월 날씨</b> 건기 시작, 24~28℃로 맑고 따뜻 → <span class="ok">다낭보다 해수욕 유리</span></li>
-        <li><b>주변 관광</b> <span class="pill">🎢 빈원더스(빈펄랜드)</span><span class="pill">🧖 머드 스파</span><span class="pill">🚤 호핑투어</span><span class="pill">🛕 포나가르 사원</span><span class="pill">🎯 콩포레스트 짚라인</span></li>
-      </ul>
-      <h4>🏡 대가족 풀빌라 추천</h4>
-      <div class="tablebox"><table><thead><tr><th>빌라/리조트</th><th>특징</th><th>예약 링크</th></tr></thead><tbody>
-        <tr><td><b>미아 리조트 나트랑</b></td><td>5베드룸 레지던스 풀빌라 <b>최대 14인</b>, 취사·BBQ (대가족 통대여 최적)</td><td><a href="https://www.agoda.com/ko-kr/search?q=mia+resort+nha+trang" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Mia+Resort+Nha+Trang" target="_blank">Booking</a></td></tr>
-        <tr><td><b>디 아남 (The Anam)</b></td><td>5성 럭셔리, 패밀리/풀빌라 주방 완비, 프라이빗 비치</td><td><a href="https://www.agoda.com/ko-kr/search?q=the+anam+nha+trang" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=The+Anam+Cam+Ranh" target="_blank">Booking</a></td></tr>
-        <tr><td><b>래디슨 블루 깜란</b></td><td>프레지덴셜 풀빌라 최대 8인, 공항 10분·오션뷰</td><td><a href="https://www.agoda.com/ko-kr/search?q=radisson+blu+cam+ranh" target="_blank">아고다</a></td></tr>
-      </tbody></table></div>
-      <p style="font-size:13.5px;margin-top:8px">🔎 통합 비교: <a href="https://kr.hotels.com/go/vietnam/blog-nhatrang-poolvilas-best-5" target="_blank">호텔스닷컴 나트랑 풀빌라 베스트</a></p>
-      <div class="note">🇻🇳 <b>다낭 vs 나트랑 한 줄 정리:</b> 관광 콘텐츠·도시 인프라·맛집은 <b>다낭</b>(호이안·바나힐), 1월 해수욕·물놀이 날씨와 항공권 가성비는 <b>나트랑</b>(빈원더스). <b>노부모 관광 위주면 다낭, 아이 물놀이 위주면 나트랑.</b></div>
+      <p class="small">🔎 통합 비교: <a href="https://kr.hotels.com/go/thailand/blog-phuket-poolvilas-best-5" target="_blank">호텔스닷컴 푸켓 풀빌라 베스트</a></p>
     </div>
 
     <!-- 괌 (3순위) -->
     <div class="dest" id="guam">
       <h3>3️⃣ 괌 <span class="rank r-silver">🥉 3순위 · 가장 짧은 비행</span></h3>
-      <div class="why"><b>왜 추천:</b> 비행 <b>4시간</b>으로 가장 짧고 시차 +1h뿐이라 아기·노부모 컨디션 관리가 가장 쉬움. 1월 건기 쾌적, 미국령 치안·위생 good. 워터파크형 리조트 강점(독채 풀빌라는 적음).</div>
+      <div class="why"><b>왜 추천:</b> 비행 <b>4시간</b>으로 가장 짧고 시차 +1h뿐이라 아기·노부모 컨디션 관리가 쉬움. 1월 건기 쾌적, 미국령 치안·위생 good. 워터파크형 리조트 강점.</div>
       <ul class="facts">
         <li><b>비행시간</b> 약 4시간 15분 (대한·제주·진에어·티웨이 직항 다수)</li>
         <li><b>1월 항공권</b> 방학·성수기로 1인 왕복 약 45~70만원</li>
         <li><b>1월 날씨</b> 건기, 27~30℃, 습도 낮아 쾌적 ✅</li>
         <li><b>주변 관광</b> <span class="pill">투몬비치</span><span class="pill">돌핀크루즈</span><span class="pill">사랑의 절벽</span><span class="pill">언더워터월드</span><span class="pill">차모로 야시장(수)</span></li>
       </ul>
-      <h4>🏨 대가족 리조트 추천 (패밀리룸/워터파크형)</h4>
+      <h4>🏨 대가족 리조트 추천 (워터파크형)</h4>
       <div class="tablebox"><table><thead><tr><th>리조트</th><th>특징</th><th>예약 링크</th></tr></thead><tbody>
         <tr><td><b>PIC 괌</b></td><td>7개 풀·워터파크·올인클루시브, 아이 천국</td><td><a href="https://www.agoda.com/ko-kr/search?q=pacific+islands+club+guam" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Pacific+Islands+Club+Guam" target="_blank">Booking</a></td></tr>
-        <tr><td><b>호텔 닛코 괌</b></td><td>워터파크·키즈클럽</td><td><a href="https://www.agoda.com/ko-kr/search?q=hotel+nikko+guam" target="_blank">아고다</a></td></tr>
+        <tr><td><b>호텔 닛코 괌 / 하얏트 리젠시 괌</b></td><td>워터파크·키즈클럽·여러 개 풀</td><td><a href="https://www.agoda.com/ko-kr/search?q=hotel+nikko+guam" target="_blank">아고다</a></td></tr>
         <tr><td><b>롯데호텔 괌</b></td><td>취사 가능 패밀리룸·유아침대 무료</td><td><a href="https://www.agoda.com/ko-kr/search?q=lotte+hotel+guam" target="_blank">아고다</a></td></tr>
-        <tr><td><b>하얏트 리젠시 괌</b></td><td>5개 풀·키즈클럽</td><td><a href="https://www.agoda.com/ko-kr/search?q=hyatt+regency+guam" target="_blank">아고다</a></td></tr>
       </tbody></table></div>
-      <div class="note">💡 괌은 독채 풀빌라가 드물어 <b>인접 패밀리룸 2~3개</b>를 잡거나 에어비앤비 단독주택을 고려하면 대가족이 함께 묵기 좋아요.</div>
+      <div class="note">💡 괌은 독채 풀빌라가 드물어 <b>인접 패밀리룸 2~3개</b>나 에어비앤비 단독주택을 고려하면 대가족이 함께 묵기 좋아요.</div>
     </div>
 
-    <!-- 세부 (4순위) -->
-    <div class="dest" id="cebu">
-      <h3>4️⃣ 세부 (필리핀) <span class="rank r-silver">4순위 · 아이 만족도 최강(Jpark)</span></h3>
-      <div class="why"><b>왜 추천:</b> 비행 <b>4시간 + 시차 0</b>으로 아기에게 편함. 한국인 운영 <b>10~30인 대형 풀빌라</b>가 많아 대가족 통째 대여 좋고 가성비 우수.</div>
+    <!-- 나트랑 (4순위) -->
+    <div class="dest" id="nhatrang">
+      <h3>4️⃣ 나트랑 (베트남) <span class="rank r-silver">4순위 · 가성비(특별함은 아쉬움)</span></h3>
+      <div class="note warn">⚖️ <b>"돈값 특별함" 기준 4순위:</b> 날씨·비행·빈원더스 모두 무난하고 가성비는 최고지만, <b>"기왕 모은 돈으로 가는 특별함"</b>에선 보라카이·푸켓에 밀려요. 예산을 아끼고 안전하게 가려면 여전히 좋은 카드.</div>
       <ul class="facts">
-        <li><b>비행시간</b> 약 4시간 10분 (대한·아시아나·필리핀·제주·진에어·세부퍼시픽 직항)</li>
-        <li><b>1월 항공권</b> 1인 왕복 약 35~55만원</li>
-        <li><b>1월 날씨</b> 건기·양호, 26~32℃, 해수욕 적합 ✅</li>
-        <li><b>주변 관광</b> <span class="pill">호핑투어(나루수안/판다논)</span><span class="pill">막탄 해양액티비티</span><span class="pill">카와산 폭포</span><span class="pill">오슬롭 고래상어</span></li>
-      </ul>
-      <h4>🏡 대가족 풀빌라 추천 (한인 독채 풀빌라 강점)</h4>
-      <div class="tablebox"><table><thead><tr><th>유형</th><th>특징</th><th>비교 링크</th></tr></thead><tbody>
-        <tr><td><b>제이파크 아일랜드 리조트 & 워터파크</b> ⭐</td><td>대형 워터파크 보유 — 찬영·세연·이현이 만족도 최강 (아이 중심이면 1순위)</td><td><a href="https://www.agoda.com/ko-kr/search?q=jpark+island+resort+waterpark+cebu" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Jpark+Island+Resort+Waterpark+Cebu" target="_blank">Booking</a></td></tr>
-        <tr><td><b>한인 독채 풀빌라</b><br>(세부집/럭스7/아테네/하다 등)</td><td>8~30인 수용, 주방·BBQ·픽업 포함, 대가족 통대여</td><td><a href="https://cebu365.com/poolvilla-booking" target="_blank">세부365 모음</a> · <a href="https://poolvilla.tv/blog/view/4" target="_blank">풀빌라TV</a></td></tr>
-        <tr><td><b>샹그릴라 막탄 / 크림슨</b></td><td>5성 리조트, 키즈클럽·전용해변 (부모님 만족·고급감)</td><td><a href="https://www.agoda.com/ko-kr/search?q=shangri-la+mactan+cebu" target="_blank">아고다</a></td></tr>
-      </tbody></table></div>
-      <div class="note warn">⚠️ 세부는 지역별 치안 편차가 있어 <b>검증된 픽업·가이드 포함 한인 풀빌라</b> 또는 막탄섬 리조트존 권장.</div>
-    </div>
-
-    <!-- 다낭 (5순위) -->
-    <div class="dest" id="danang">
-      <h3>5️⃣ 다낭 (베트남) <span class="rank r-bronze">5순위 · 1월 날씨가 약점</span></h3>
-      <div class="note warn">⚖️ <b>날씨 기준 적용 결과 5순위:</b> 풀빌라·관광 콘텐츠는 후보 중 <b>최강</b>이지만, 이번 최우선 기준인 "1월 날씨·물놀이"에서 <b>흐린 날 잦고 바닷물이 차가운 점</b>이 감점 요인이에요. <b>"물놀이보다 관광·풀빌라 호캉스 위주"</b>로 방향을 틀면 다낭은 다시 1순위급입니다.</div>
-      <div class="why"><b>왜 추천:</b> 한국에서 가장 인기 있는 3세대 가족여행지. 비행 짧고 항공권 싸고 풀빌라 인프라 압도적, 어른(호이안·바나힐)·아이(해변·테마파크) 모두 만족.</div>
-      <ul class="facts">
-        <li><b>비행시간</b> 약 4시간 30분~5시간 (대한·아시아나·제주·진에어·티웨이 직항)</li>
-        <li><b>1월 항공권</b> 1인 왕복 약 45~70만원 (LCC 더 저렴)</li>
-        <li><b>1월 날씨</b> 21~26℃, 쾌적하나 흐린 날·간헐적 비, 바닷물 다소 차가움 → 온수풀·관광 중심</li>
-        <li><b>주변 관광</b> <span class="pill">🏰 바나힐(선월드)</span><span class="pill">🏮 호이안(차 30분)</span><span class="pill">⛰️ 오행산</span><span class="pill">🏖️ 미케비치·한시장</span></li>
+        <li><b>비행시간</b> 약 4시간 50분 (캄란 CXR / 대한·아시아나·제주·진에어·티웨이·에어서울·비엣젯)</li>
+        <li><b>1월 항공권</b> 1인 왕복 약 35~55만원 (후보 중 저렴한 편)</li>
+        <li><b>1월 날씨</b> 건기·24~28℃ 맑고 따뜻 → 해수욕 가능</li>
+        <li><b>주변 관광</b> <span class="pill">🎢 빈원더스(빈펄랜드)</span><span class="pill">🧖 머드 스파</span><span class="pill">🚤 호핑투어</span><span class="pill">🛕 포나가르 사원</span></li>
       </ul>
       <h4>🏡 대가족 풀빌라 추천</h4>
       <div class="tablebox"><table><thead><tr><th>빌라/리조트</th><th>특징</th><th>예약 링크</th></tr></thead><tbody>
-        <tr><td><b>프리미어 빌리지 다낭</b></td><td>전 객실 독채 풀빌라, 무료 키즈클럽·탁아, 2~4베드룸 (대가족 최적)</td><td><a href="https://www.agoda.com/ko-kr/search?city=16035&q=premier+village+danang" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Premier+Village+Danang+Resort" target="_blank">Booking</a></td></tr>
-        <tr><td><b>다낭 메리어트 논느억비치 빌라</b></td><td>전 객실 풀빌라, 2~4베드룸</td><td><a href="https://www.agoda.com/ko-kr/search?q=danang+marriott+non+nuoc" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Danang+Marriott+Non+Nuoc+Beach+Villas" target="_blank">Booking</a></td></tr>
-        <tr><td><b>퓨전 리조트 & 빌라 다낭</b></td><td>최대 5베드룸 풀빌라, 스파 무제한</td><td><a href="https://www.agoda.com/ko-kr/search?q=fusion+resort+danang" target="_blank">아고다</a></td></tr>
-        <tr><td><b>하얏트 리젠시 다낭</b></td><td>풀빌라+간이주방(취사), 키즈풀</td><td><a href="https://www.agoda.com/ko-kr/search?q=hyatt+regency+danang" target="_blank">아고다</a></td></tr>
+        <tr><td><b>미아 리조트 나트랑</b></td><td>5베드룸 풀빌라 <b>최대 14인</b>, 취사·BBQ (대가족 통대여)</td><td><a href="https://www.agoda.com/ko-kr/search?q=mia+resort+nha+trang" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Mia+Resort+Nha+Trang" target="_blank">Booking</a></td></tr>
+        <tr><td><b>디 아남 (The Anam)</b></td><td>5성 럭셔리, 패밀리/풀빌라 주방 완비, 프라이빗 비치</td><td><a href="https://www.agoda.com/ko-kr/search?q=the+anam+nha+trang" target="_blank">아고다</a></td></tr>
+        <tr><td><b>빈펄 리조트 나트랑</b></td><td>빈원더스 연계, 가족형 동선 좋음</td><td><a href="https://www.agoda.com/ko-kr/search?q=vinpearl+resort+nha+trang" target="_blank">아고다</a></td></tr>
       </tbody></table></div>
-      <p style="font-size:13.5px;margin-top:8px">🔎 통합 비교: <a href="https://www.agoda.com/ko-kr/theme/villas/city/da-nang-vn.html" target="_blank">아고다 다낭 풀빌라 모음</a> · <a href="https://kr.trip.com/guide/stay/다낭+풀빌라.html" target="_blank">트립닷컴 가이드</a></p>
     </div>
 
-    <!-- 코타키나발루 -->
+    <!-- 코타키나발루 (5순위) -->
     <div class="dest" id="kk">
-      <h3>6️⃣ 코타키나발루 (말레이시아) <span class="rank r-ref">6순위 · 가성비 다크호스</span></h3>
-      <div class="why"><b>왜 추천:</b> 항공권이 <b>가장 저렴</b>(LCC 편도 8~12만원대도)하고 독채 빌라 가성비 좋음. 석양 명소로 유명해 칠순 분위기 ↑.</div>
+      <h3>5️⃣ 코타키나발루 (말레이시아) <span class="rank r-ref">5순위 · 가성비 다크호스</span></h3>
+      <div class="why"><b>왜 추천:</b> 항공권이 <b>가장 저렴</b>하고 독채 빌라 가성비 좋음. 석양 명소로 칠순 분위기 ↑. 단 1월은 우기 끝물이라 소나기 변수.</div>
       <ul class="facts">
         <li><b>비행시간</b> 약 5시간 30분 (티웨이·제주·진에어·에어아시아 직항)</li>
         <li><b>1월 항공권</b> 1인 왕복 약 30~50만원 (최저가 노선)</li>
-        <li><b>1월 날씨</b> 우기 끝물, 28~31℃에 짧은 스콜성 비 (대체로 물놀이 가능)</li>
-        <li><b>주변 관광</b> <span class="pill">마누칸/사피섬 호핑</span><span class="pill">탄중아루 석양</span><span class="pill">키나발루 공원</span><span class="pill">워터프론트</span></li>
+        <li><b>1월 날씨</b> 우기 끝물, 28~31℃에 짧은 스콜성 비</li>
+        <li><b>주변 관광</b> <span class="pill">마누칸/사피섬 호핑</span><span class="pill">탄중아루 석양</span><span class="pill">키나발루 공원</span></li>
       </ul>
       <h4>🏡 대가족 빌라/리조트 추천</h4>
       <div class="tablebox"><table><thead><tr><th>빌라/리조트</th><th>특징</th><th>예약 링크</th></tr></thead><tbody>
         <tr><td><b>넥서스 리조트 가람부나이</b></td><td>전용해변, 3베드룸+전용풀 로얄빌라</td><td><a href="https://www.agoda.com/ko-kr/search?q=nexus+resort+karambunai" target="_blank">아고다</a> · <a href="https://www.booking.com/searchresults.ko.html?ss=Nexus+Resort+Karambunai" target="_blank">Booking</a></td></tr>
-        <tr><td><b>분가라야 아일랜드 (5성)</b></td><td>가야섬, 2~3베드룸 빌라</td><td><a href="https://www.agoda.com/ko-kr/search?q=bunga+raya+island+resort" target="_blank">아고다</a></td></tr>
-        <tr><td><b>보르네오 비치 빌라스</b></td><td>전 객실 주방, 풀빌라 전용풀</td><td><a href="https://www.agoda.com/ko-kr/search?q=borneo+beach+villas" target="_blank">아고다</a></td></tr>
-        <tr><td><b>샹그릴라 라사리아/탄중아루</b></td><td>대형 가족 리조트, 키즈클럽</td><td><a href="https://www.agoda.com/ko-kr/search?q=shangri-la+rasa+ria+kota+kinabalu" target="_blank">아고다</a></td></tr>
+        <tr><td><b>샹그릴라 라사리아 / 분가라야 아일랜드</b></td><td>대형 가족 리조트·섬 빌라, 키즈클럽</td><td><a href="https://www.agoda.com/ko-kr/search?q=shangri-la+rasa+ria+kota+kinabalu" target="_blank">아고다</a></td></tr>
       </tbody></table></div>
     </div>
 
-    <!-- 발리 -->
+    <!-- 발리 (6순위) -->
     <div class="dest no" id="bali">
-      <h3>7️⃣ 발리 (인도네시아) <span class="rank r-no">⚠️ 7순위 · 1월 비추천</span></h3>
-      <div class="why"><b>이유:</b> 풀빌라 천국이지만 <b>1월이 우기 한복판으로 연중 비가 가장 많은 시기</b>. 폭우·높은 습도로 차질 크고, 직항 항공권도 1월이 최고가(80~120만). 칠순 물놀이 여행 시기로는 부적합.</div>
+      <h3>6️⃣ 발리 (인도네시아) <span class="rank r-no">⚠️ 6순위 · 1월 비추천</span></h3>
+      <div class="why"><b>이유:</b> 풀빌라 천국이지만 <b>1월이 우기 한복판으로 연중 비가 가장 많은 시기</b>. 폭우·습도로 차질 크고 직항 항공권도 1월이 최고가(80~120만). 칠순 물놀이 여행 시기로는 부적합.</div>
       <ul class="facts">
         <li>비행 약 7시간. 우기만 피하면(4~10월) 최고의 풀빌라 여행지 → <b>시기를 바꾼다면 강력 추천</b></li>
-        <li>참고: <a href="https://kr.hotels.com/go/indonesia/blog-bali-poolvilas-best-5" target="_blank">호텔스닷컴 발리 풀빌라 베스트</a></li>
-      </ul>
-    </div>
-
-    <!-- 시드니 -->
-    <div class="dest no" id="sydney">
-      <h3>8️⃣ 시드니 (호주) <span class="rank r-no">⚠️ 8순위 · 체력 부담 최대</span></h3>
-      <div class="why"><b>이유:</b> 비행 <b>10시간 30분 + 시차 2시간</b>은 1세 아기·70세 부모님께 가장 부담. 1월은 한여름이나 자외선 강함. 항공권도 1인 왕복 130~200만원(10명 항공비만 1,300만+).</div>
-      <ul class="facts">
-        <li>풀빌라보단 시티 호텔/아파트먼트 중심 → 대가족 한 채도 제한적</li>
-        <li>5박6일로는 이동에 시간 소모 과다 → 비추천</li>
       </ul>
     </div>
   </section>
@@ -300,35 +257,35 @@
   <!-- 최종 추천 -->
   <section id="final">
     <h2>🎯 최종 추천 & 다음 단계</h2>
-    <h3>시나리오별 추천</h3>
+    <h3>목적별 추천</h3>
     <div class="tablebox"><table><thead><tr><th>이런 가족이라면</th><th>추천</th></tr></thead><tbody>
-      <tr><td>무난하게 모두 만족 + 풀빌라 호캉스 + 관광(호이안/바나힐)</td><td><span class="rank r-gold">🥇</span> <b>다낭</b> (1월 해수욕 기대는 낮추기)</td></tr>
-      <tr><td>베트남이되 아이 물놀이·1월 날씨 우선</td><td><span class="rank r-gold">🥇</span> <b>나트랑</b> (빈원더스 + 따뜻한 바다)</td></tr>
-      <tr><td>날씨·물놀이 확실하게, 칠순 격식 있는 럭셔리</td><td><b>푸켓</b></td></tr>
-      <tr><td>아기·부모님 컨디션 1순위, 가장 편한 여행</td><td><b>괌</b></td></tr>
-      <tr><td>예산 절약 + 독채 통대여 + 가성비</td><td><b>코타키나발루 / 세부</b></td></tr>
+      <tr><td>🏖️ <b>1월에 확실한 물놀이 + 세계적 비치</b>로 특별하게</td><td><span class="rank r-gold">🥇</span> <b>보라카이</b></td></tr>
+      <tr><td>🏝️ <b>럭셔리 풀빌라 호캉스</b>로 칠순 격식</td><td><b>푸켓</b></td></tr>
+      <tr><td>👶 <b>아기·부모님 컨디션 1순위(짧은 비행)</b> + 물놀이</td><td><b>괌</b></td></tr>
+      <tr><td>💰 <b>예산 아끼고 안전하게</b></td><td><b>나트랑 / 코타키나발루</b></td></tr>
     </tbody></table></div>
 
     <h3>제가 이어서 도와드릴 수 있는 것</h3>
     <ol>
-      <li>1월 중순 <b>정확한 날짜(예: 1/15~1/20)</b> 주시면 → 실시간 항공권·풀빌라 가격 재조회</li>
-      <li>후보 2~3곳 좁히시면 → <b>10명 기준 총예산 시뮬레이션</b>(항공+숙소+현지투어)</li>
-      <li>선택지 확정 시 → <b>5박6일 일정표</b>(노부모·아기 페이스 반영 동선)</li>
+      <li>후보를 <b>2~3곳으로 압축</b>하면 → <b>10명 기준 총예산 시뮬레이션</b>(항공+숙소+투어)</li>
+      <li>1월 중순 <b>정확한 날짜</b> 주시면 → 실시간 항공권·리조트 가격 재조회</li>
+      <li>확정 시 → <b>5박6일 일정표</b>(노부모·아기 페이스 반영 동선)</li>
     </ol>
+    <div class="note good"><b>제 추천 한 줄:</b> "기왕 모은 돈, 더 특별하게"라면 → <b>보라카이</b>가 1월 날씨·세계적 비치·특별함을 모두 잡는 새 1순위예요. 럭셔리 풀빌라를 원하면 <b>푸켓</b>이 결승 상대.</div>
   </section>
 
   <!-- 출처 -->
   <section>
     <h2>📚 출처 & 유의사항</h2>
-    <p style="font-size:13.5px">
-      <b>항공권/비행시간:</b> <a href="https://www.skyscanner.co.kr" target="_blank">스카이스캐너</a>, <a href="https://kr.trip.com" target="_blank">트립닷컴</a>, <a href="https://www.kayak.co.kr" target="_blank">카약</a>, <a href="https://www.hotelscombined.co.kr" target="_blank">호텔스컴바인</a><br>
-      <b>날씨:</b> <a href="https://ko.weatherspark.com" target="_blank">웨더스파크</a>, <a href="https://www.accuweather.com" target="_blank">어큐웨더</a>, 호주정부관광청<br>
-      <b>풀빌라:</b> <a href="https://www.agoda.com" target="_blank">아고다</a>, <a href="https://www.booking.com" target="_blank">Booking.com</a>, <a href="https://kr.hotels.com" target="_blank">호텔스닷컴</a>, <a href="https://cebu365.com" target="_blank">세부365</a>
+    <p class="small">
+      <b>항공/비행:</b> <a href="https://www.skyscanner.co.kr" target="_blank">스카이스캐너</a>, <a href="https://kr.trip.com" target="_blank">트립닷컴</a>, <a href="https://www.kayak.co.kr" target="_blank">카약</a> ·
+      <b>날씨:</b> <a href="https://ko.weatherspark.com" target="_blank">웨더스파크</a>, 트립스토어 ·
+      <b>숙소:</b> <a href="https://www.agoda.com" target="_blank">아고다</a>, <a href="https://www.booking.com" target="_blank">Booking</a>, <a href="https://kr.hotels.com" target="_blank">호텔스닷컴</a>
     </p>
     <div class="note warn">⚠️ 모든 가격은 2026년 6월 시점 추정치이며, 실제 2027년 1월 예약 시 변동됩니다. 예약 전 실시간 확인 필수.</div>
   </section>
 
-  <footer>아빠 칠순 가족여행 프로젝트 · 2026.6.7 작성 · 함께 만든 행복한 여행이 되기를 🎂</footer>
+  <footer>홍성양 아빠 칠순 가족여행 프로젝트 · 2026.6.12 개정 · 함께 만든 행복한 여행이 되기를 🎂</footer>
 </div>
 </body>
 </html>
